@@ -51,7 +51,7 @@ public class AmazonObjectMapperTest {
 
     // Skip package and exception classes
     final String simpleName = c.getSimpleName();
-    skip = simpleName == "package-info" || simpleName.endsWith("Exception");
+    skip = "package-info".equals(simpleName) || simpleName.endsWith("Exception");
 
     // Ignore transform classes
     skip = skip || c.getName().contains(".transform.");
